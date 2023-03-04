@@ -2,7 +2,7 @@ const express = require('express');
 const cors = require('cors')
 
 const db = require('./database/db');
-//const routes = require('./routes/routes');
+const routes = require('./routes/routes');
 
 const app = express()
 
@@ -32,7 +32,7 @@ app.use(cors({
 app.use(express.json())
 
 //definindo rotas
-//app.use('/api', routes)
+app.use('/api', routes)
 
 // executando o servidor
 const port = process.env.PORT || 5050
