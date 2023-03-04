@@ -7,6 +7,6 @@ const Schema = new mongoose.Schema({
     adress: String,
 })
 
-const model = mongoose.model('products', Schema)
+const model = mongoose.model('clientes', Schema)
 
 module.exports = model
