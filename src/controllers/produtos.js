@@ -12,7 +12,7 @@ async function get(req, res) {
   //}
 
   const products = await productsModel.find(obj)
-  res.send(products)
+  res.json(products)
 }
 
 async function post(req, res) {
@@ -38,7 +38,7 @@ async function put(req, res) {
 
   const product = await productsModel.findOneAndUpdate({ _id: id }, req.body, { new: true })
 
-  res.send({
+  res.json({
     message: 'success',
     product,
   })

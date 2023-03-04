@@ -5,7 +5,6 @@ const Schema = new mongoose.Schema({
     produto: String,
     status: String,
     date: Date,
-
 })
 
 const model = mongoose.model('products', Schema)
